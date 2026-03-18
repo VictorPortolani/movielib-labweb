@@ -4,27 +4,43 @@ Projeto desenvolvido para a disciplina de **Laboratório de Desenvolvimento Web*
 
 ## Descrição
 
-Aplicação web para gerenciamento e consulta de filmes utilizando a API TMDB (The Movie Database).
+Aplicação web para gerenciamento e consulta de filmes utilizando a API TMDB (The Movie Database). Permite buscar, filtrar e explorar informações detalhadas sobre filmes de forma interativa e responsiva.
 
 ## Tecnologias
 
-- HTML5
-- CSS3
-- JavaScript
-- TMDB API
+- **Frontend:** HTML5, CSS3, JavaScript
+- **API:** TMDB (The Movie Database)
+- **Padrão:** Arquitetura REST
 
-## Objetivos
+## Funcionalidades
 
-- Praticar consumo de APIs REST
-- Desenvolver interface responsiva
-- Implementar buscas e filtros
-- Aplicar conceitos de DOM manipulation
+- 🔍 Busca de filmes por título
+- 📊 Filtros por gênero e classificação
+- 📱 Interface responsiva e intuitiva
+- 🎬 Exibição de detalhes completos dos filmes
 
 ## Como Usar
 
 1. Clone o repositório
-2. Abra o arquivo `index.html` no navegador
-3. Configure sua chave de API do TMDB
+2. Obtenha uma chave de API em [tmdb.org](https://www.themoviedb.org/settings/api)
+3. Crie um arquivo `config.js` e adicione sua chave: `const API_KEY = 'sua_chave_aqui'`
+4. Abra `index.html` no navegador
+
+## Estrutura do Projeto
+
+```
+├── index.html
+├── style.css
+├── script.js
+└── config.js (não incluído - crie com sua API key)
+```
+
+## Objetivos Educacionais
+
+- Praticar consumo de APIs REST
+- Desenvolver interfaces responsivas
+- Implementar buscas e filtros dinâmicos
+- Aplicar conceitos de DOM manipulation
 
 ## Autor
 

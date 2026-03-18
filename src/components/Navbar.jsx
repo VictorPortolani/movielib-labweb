@@ -4,7 +4,7 @@ import {BiCameraMovie, BiSearchAlt2} from 'react-icons/bi'
 function Navbar() {
   return (
     <div>
-        <h1>Movie Lib TMDB</h1>
+        <h1></h1>
             <nav id="navbar">
                 <h2>
                     <Link to="/">

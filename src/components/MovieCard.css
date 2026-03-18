@@ -1,0 +1,85 @@
+/* MovieCard.css */
+
+.movie-card {
+    width: 30%; /* Ajusta para caber 3 por linha em telas grandes */
+    background-color: #1a1c29; /* Fundo do card levemente mais claro que o body */
+    padding: 1rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 15px; /* Bordas suaves */
+    border-bottom: 5px solid #f7d354; /* Detalhe amarelo na base */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Efeito de levante ao passar o mouse */
+.movie-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(247, 211, 84, 0.2);
+}
+
+.movie-card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.movie-card h2 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #fff;
+    /* Limita o título a 2 linhas para não quebrar o layout */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Estilização da Estrela e Nota */
+.movie-card span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+    font-weight: bold;
+    color: #f7d354; /* Estrela amarela */
+    font-size: 1.1rem;
+}
+
+.movie-card svg {
+    color: #f7d354;
+}
+
+/* Estilização do Botão de Detalhes */
+.movie-card a {
+    background-color: #f7d354;
+    border: 2px solid #f7d354;
+    border-radius: 8px;
+    color: #050a12; /* Texto escuro no botão amarelo */
+    padding: 0.8rem 0;
+    text-align: center;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+.movie-card a:hover {
+    background-color: transparent;
+    color: #f7d354;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 900px) {
+    .movie-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    .movie-card {
+        width: 100%;
+    }
+}

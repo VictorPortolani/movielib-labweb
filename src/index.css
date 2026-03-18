@@ -1,22 +1,15 @@
+/* Importando uma fonte mais moderna */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 *{
-    font-family: Helvetica;
+    font-family: 'Montserrat', sans-serif; /* Troca a Helvetica por algo mais premium */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    background-color: #333;
-    color: #f0f0f0;
-}
-
-a{
-    text-decoration: none;
-    color: #f7d354;
-    transition: 0.5s;
-}
-
-a:hover{
-    color: #b8930c;
-    text-shadow: 0 0 8px rgba(32, 28, 13, 0.774);
+    background-color: #0b0d17; /* Um "quase preto" azulado, mais moderno que o cinza */
+    color: #ffffff;
+    line-height: 1.6;
 }

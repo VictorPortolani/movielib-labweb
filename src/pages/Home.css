@@ -1,0 +1,56 @@
+/* Home.css */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Título principal da Home */
+h1 {
+    color: #fff;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 2rem 0;
+    /* Um detalhe visual no título */
+    border-left: 8px solid #f7d354;
+    padding-left: 1rem;
+    display: inline-block;
+    margin-left: 2rem;
+}
+
+/* O segredo para alinhar os cards: CSS GRID */
+.movies-container {
+    display: grid;
+    /* Cria colunas que se ajustam sozinhas (mínimo 560px) */
+    grid-template-columns: repeat(auto-fill, minmax(560px, 1fr));
+    gap: 0rem;
+    justify-items: center; /* Centraliza os cards dentro das células */
+
+    padding: 2rem;
+    /* Background com degradê "vibe" cinema brasileiro */
+    background: radial-gradient(circle at top, #10141d 0%, #050a12 100%);
+    border-radius: 20px;
+    margin: 0 1rem 2rem;
+}
+
+/* Mensagem de carregamento */
+.movies-container p {
+    grid-column: 1 / -1; /* Faz o texto ocupar a linha toda */
+    text-align: center;
+    font-size: 1.5rem;
+    color: #f7d354;
+    padding: 3rem;
+}
+
+/* Responsividade extra */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+        margin-left: 1rem;
+    }
+    
+    .movies-container {
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+}

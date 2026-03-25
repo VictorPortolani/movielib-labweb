@@ -45,8 +45,8 @@ Aplicação web para gerenciamento e consulta de filmes utilizando a API TMDB (T
 movie_lib/
 ├── index.html
 ├── style.css
-├── .env
-├── config.js (não incluído - criar com sua chave API)
+├── script.js
+├── .env (não incluído - criar com sua chave API)
 └── assets/
 ```
 

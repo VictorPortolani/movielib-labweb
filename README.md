@@ -31,9 +31,12 @@ Aplicação web para gerenciamento e consulta de filmes utilizando a API TMDB (T
     git clone <seu-repositorio>
     ```
 2. Obtenha uma chave de API em [tmdb.org](https://www.themoviedb.org/settings/api)
-3. Crie o arquivo `config.js`:
-    ```javascript
-    const API_KEY = 'sua_chave_aqui';
+3. Crie o arquivo `.env`:
+    ```env
+    VITE_API_KEY="sua_chave"
+    VITE_API=https://api.themoviedb.org/3/movie/
+    VITE_SEARCH=https://api.themoviedb.org/3/search/movie/
+    VITE_IMG=https://image.tmdb.org/t/p/w500/   
     ```
 4. Abra `index.html` no navegador
 

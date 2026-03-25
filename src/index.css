@@ -1,15 +1,77 @@
-/* Importando uma fonte mais moderna */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+/* Fonte moderna */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
-*{
-    font-family: 'Montserrat', sans-serif; /* Troca a Helvetica por algo mais premium */
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Cores simples e limpas */
+:root {
+  --bg: #0b0d17;
+  --bg-soft: #121526;
+  --text: #ffffff;
+  --text-muted: #b0b3c7;
+  --accent: #1db954;
+}
+
+/* Body */
 body {
-    background-color: #0b0d17; /* Um "quase preto" azulado, mais moderno que o cinza */
-    color: #ffffff;
-    line-height: 1.6;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* Títulos */
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+/* Parágrafos */
+p {
+  color: var(--text-muted);
+}
+
+/* Links */
+a {
+  color: var(--text);
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+/* Botões simples */
+button {
+  background-color: var(--accent);
+  color: #000;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Inputs básicos */
+input {
+  background-color: var(--bg-soft);
+  border: 1px solid #222;
+  color: var(--text);
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+/* Container padrão */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
 }

@@ -1,78 +1,86 @@
-
+/* Navbar container */
 #navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #0b111d; /* Fundo escuro levemente azulado */
-    border-bottom: 3px solid #f7d354; /* Linha amarela 'vibrante' */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #121526; /* mesmo bg-soft */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+/* Logo */
 #navbar h2 a {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    font-size: 1.8rem;
-    color: #f7d354;
-    transition: 0.4s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-decoration: none;
 }
 
-#navbar h2 a:hover {
-    color: #fff;
-    filter: drop-shadow(0 0 5px #f7d354);
+/* Ícone da logo */
+#navbar h2 svg {
+  color: #1db954; /* verde destaque */
+  font-size: 1.8rem;
 }
 
-/* Estilização do Form de Busca */
+/* Formulário */
 #navbar form {
-    display: flex;
-    gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
+/* Input */
 #navbar input {
-    padding: 0.6rem 1.2rem;
-    border-radius: 25px; /* Bordas bem arredondadas */
-    border: 2px solid transparent;
-    background-color: #1a1c29;
-    color: #fff;
-    outline: none;
-    transition: 0.3s;
-    width: 250px;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid #222;
+  background-color: #0b0d17;
+  color: #fff;
+  outline: none;
+  transition: 0.2s;
 }
 
 #navbar input:focus {
-    border-color: #f7d354;
-    background-color: #050a12;
+  border-color: #1db954;
 }
 
-/* Botão de busca */
+/* Botão */
 #navbar button {
-    background-color: #f7d354;
-    border: none;
-    border-radius: 50%; /* Botão circular para o ícone */
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.3rem;
-    cursor: pointer;
-    transition: 0.3s;
-    color: #050a12;
+  background-color: #1db954;
+  border: none;
+  padding: 0.45rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: 0.2s;
 }
 
 #navbar button:hover {
-    background-color: #fff;
-    transform: scale(1.1);
+  opacity: 0.9;
 }
 
-/* Responsividade básica */
-@media (max-width: 600px) {
-    #navbar {
-        flex-direction: column;
-        gap: 1rem;
-    }
+/* Ícone do botão */
+#navbar button svg {
+  color: #000;
+  font-size: 1.2rem;
+}
 
-    #navbar input {
-        width: 100%;
-    }
+/* Responsivo */
+@media (max-width: 600px) {
+  #navbar {
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: flex-start;
+  }
+
+  #navbar form {
+    width: 100%;
+  }
+
+  #navbar input {
+    width: 100%;
+  }
 }

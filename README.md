@@ -1,9 +1,7 @@
 
 # Movie Lib
 
-
 Projeto desenvolvido para a disciplina de **Laboratório de Desenvolvimento Web** da FATEC, sob orientação do professor **Danilo Vieira**.
-
 
 ## Descrição
 
@@ -23,6 +21,7 @@ Aplicação web para gerenciamento e consulta de filmes utilizando a API TMDB (T
 - 📱 Interface responsiva e acessível
 - 🎬 Exibição completa de detalhes dos filmes
 - ⭐ Avaliações e recomendações
+- ✨ [Adicione aqui as novas funcionalidades implementadas]
 
 ## Instalação e Configuração
 
@@ -36,7 +35,7 @@ Aplicação web para gerenciamento e consulta de filmes utilizando a API TMDB (T
     VITE_API_KEY="sua_chave"
     VITE_API=https://api.themoviedb.org/3/movie/
     VITE_SEARCH=https://api.themoviedb.org/3/search/movie/
-    VITE_IMG=https://image.tmdb.org/t/p/w500/   
+    VITE_IMG=https://image.tmdb.org/t/p/w500/
     ```
 4. Abra `index.html` no navegador
 
@@ -46,7 +45,7 @@ Aplicação web para gerenciamento e consulta de filmes utilizando a API TMDB (T
 movie_lib/
 ├── index.html
 ├── style.css
-├── script.js
+├── .env
 ├── config.js (não incluído - criar com sua chave API)
 └── assets/
 ```
@@ -59,6 +58,11 @@ movie_lib/
 - Aplicar conceitos de DOM manipulation
 - Tratamento de requisições assíncronas
 
+## Atualizações Recentes
+
+- [Descreva as mudanças implementadas]
+- [Data ou versão das atualizações]
+
 ## Autor
 
 Desenvolvido como atividade avaliativa de LabWeb - FATEC
@@ -66,3 +70,4 @@ Desenvolvido como atividade avaliativa de LabWeb - FATEC
 ---
 
 *Professor: Danilo Vieira*
+

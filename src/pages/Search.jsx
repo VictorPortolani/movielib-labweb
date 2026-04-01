@@ -34,8 +34,8 @@ function Search() {
 
   return (
     <div>
-      <h1>Search Results for "{query}"</h1>
-      <p>Showing {results.length || 0} results.</p>
+      <h1>Resultados para "{query}"</h1>
+      <p>Mostrando {results.length || 0} resultados.</p>
 
       <div className="movies-container">
         {results.map((movie) => (

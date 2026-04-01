@@ -1,0 +1,171 @@
+/* Container de Fundo (Backdrop) */
+.movie-backdrop-container {
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Camada de Gradiente (Overlay) - Ajustada para garantir leitura perfeita do texto */
+.movie-overlay {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(
+    to right, 
+    rgba(15, 23, 42, 0.95) 0%,    /* Quase totalmente escuro na esquerda */
+    rgba(15, 23, 42, 0.85) 45%,   /* Continua escuro no meio */
+    rgba(15, 23, 42, 0.2) 100%    /* Fica transparente na direita */
+  );
+  display: flex;
+  align-items: center; /* Centraliza verticalmente o conteúdo na tela */
+}
+
+/* Container Principal (Conteúdo) */
+.movie-page {
+  display: flex;
+  gap: 3rem; /* Mais espaço entre pôster e texto */
+  padding: 3rem 5%;
+  color: #fff;
+  max-width: 1200px;
+  margin: 0 auto; /* Centraliza o conteúdo na tela grande */
+  align-items: flex-start; /* Evita que a imagem estique na vertical */
+  width: 100%;
+  z-index: 2; /* Garante que o texto fique acima do fundo */
+}
+
+/* Pôster do Filme */
+.movie-page img.poster-img {
+  width: 100%;
+  max-width: 350px; /* Um pouco maior e mais imponente */
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); /* Sombra suave para destacar o pôster do fundo */
+}
+
+/* Container de Informações */
+.movie-info {
+  flex: 1; /* Ocupa todo o espaço restante */
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem; /* Espaçamento uniforme entre os blocos */
+}
+
+/* Título */
+.movie-info h1 {
+  font-size: 3rem; /* Bem maior, padrão Netflix */
+  font-weight: 800;
+  margin: 0;
+  color: #f5c518; /* Mantendo o amarelo */
+  line-height: 1.1;
+}
+
+/* Agrupamento Meta (Nota, Classificação, Duração, Ano) - Estilo Netflix */
+.movie-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* Espaço bacana entre cada informação */
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #e5e5e5;
+}
+
+/* Nota com estrela */
+.movie-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.movie-rating svg {
+  color: #1db954;
+  font-size: 1.3rem;
+}
+
+/* Classificação Indicativa (Corrigida para não ocupar 100% da tela) */
+.movie-page .classification {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto; 
+  min-width: 32px;
+  height: 28px;
+  padding: 0 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin: 0; 
+}
+
+/* Duração (Ícone + Texto) */
+.movie-runtime {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem; 
+}
+
+.movie-runtime svg {
+  color: #1db954; /* Relógio verde acompanhando a paleta */
+  font-size: 1.1rem;
+}
+
+/* Sinopse / Descrição Principal */
+.movie-info p.description {
+  font-size: 1.15rem; /* Fonte um pouco maior para leitura confortável */
+  line-height: 1.6;
+  color: #e5e5e5;
+  margin-top: 0.5rem;
+}
+
+/* Linhas de Detalhes Secundários (Data, Gêneros) */
+.movie-info p {
+  margin: 0;
+  color: #a3a6b8;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Destaques (Labels como "Gêneros:") */
+.movie-info strong {
+  color: #1db954; /* Mantendo seu verde para contraste */
+  font-weight: 600;
+  margin-right: 0.4rem;
+}
+
+/* Responsividade (Mobile) */
+@media (max-width: 768px) {
+  /* Altera o gradiente escuro de "esq->dir" para "cima->baixo" no celular */
+  .movie-overlay {
+    background: linear-gradient(to bottom, rgba(15, 23, 42, 0.7) 0%, rgba(15, 23, 42, 1) 40%, rgba(15, 23, 42, 1) 100%);
+    padding-top: 2rem;
+    align-items: flex-start; /* Permite rolar a tela tranquilamente no mobile */
+  }
+
+  .movie-page {
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .movie-page img.poster-img {
+    max-width: 260px;
+  }
+
+  .movie-info h1 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .movie-meta {
+    justify-content: center; /* Centraliza nota, classificação e duração no mobile */
+  }
+
+  .movie-info p.description {
+    text-align: justify;
+  }
+}

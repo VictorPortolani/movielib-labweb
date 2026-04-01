@@ -1,106 +1,96 @@
-/* Card */
+/* Container Principal do Card */
 .movie-card {
-  background-color: #121526;
-  border-radius: 8px;
-  overflow: hidden;
-  padding: 0.8rem;
-  text-align: center;
-  transition: 0.25s ease;
+  background-color: transparent; /* Removemos o fundo para focar totalmente na imagem */
+  border-radius: 6px;
+  padding: 0; /* Sem espaçamento, a imagem vai de ponta a ponta */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+  position: relative; /* Essencial para o "selo" de classificação flutuar aqui dentro */
 }
 
-/* Hover leve */
+/* Efeito de Hover Padrão Netflix (Zoom) */
 .movie-card:hover {
-  transform: translateY(-5px);
+  transform: scale(1.05); /* Faz o card dar um leve zoom para frente */
+  z-index: 10; /* Garante que o card focado não fique por baixo dos outros */
+  cursor: pointer;
 }
 
-/* Imagem */
+/* Imagem do Pôster */
 .movie-card img {
   width: 100%;
-  border-radius: 6px;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 6px; /* Cantos arredondados finos */
   margin-bottom: 0.6rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Sombra direta na imagem para dar profundidade */
+}
+
+/* Área de Informações (Título e Nota) */
+.movie-card-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Netflix alinha o texto à esquerda, fica mais cinematográfico */
+  flex-grow: 1;
+  padding: 0 0.2rem; /* Um micro respiro nas laterais do texto */
 }
 
 /* Título */
 .movie-card h2 {
-  font-size: 0.95rem;
-  margin-bottom: 0.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 0.3rem 0;
   line-height: 1.2;
+  text-align: left;
+  /* Reduzido para 1 linha com reticências para um visual mais limpo */
+  display: -webkit-box;
+  -webkit-line-clamp: 1; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-/* Nota */
-.movie-card span {
+/* Container da Nota */
+.movie-card .rating {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 0.3rem;
-  color: #b0b3c7;
+  gap: 0.4rem;
+  color: #46d369; /* Verde similar ao de "Relevância" da Netflix */
   font-size: 0.9rem;
-  margin-bottom: 0.6rem;
+  font-weight: bold;
 }
 
-/* Estrela */
-.movie-card span svg {
-  color: #1db954;
+/* Ícone de Estrela */
+.movie-card .rating svg {
+  color: inherit;
+  width: 14px;
+  height: 14px;
 }
 
-/* Link botão */
-.movie-card a {
-  display: inline-block;
-  background-color: #1db954;
-  color: #000;
-  padding: 0.4rem 0.8rem;
-  border-radius: 4px;
-  font-size: 0.8rem;
-  text-decoration: none;
-  transition: 0.2s;
-}
-
-.movie-card a:hover {
-  opacity: 0.9;
-}
-
+/* Barra de Classificação Indicativa (Transformada em um Badge estilo Netflix) */
 .classification {
-  background-color: #1db954;
-  color: #000;
-  font-size: 0.7rem;
-  padding: 2px 6px;
-  border-radius: 4px;
-  display: inline-block;
-  margin-top: 5px;
+  position: absolute; /* Tira o elemento do final da página e o faz flutuar */
+  top: 8px; /* Gruda no topo do pôster */
+  right: 8px; /* Gruda na direita do pôster */
+  width: auto; /* Ocupa apenas o tamanho do número */
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+  margin: 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.6); /* Sombra para garantir leitura mesmo em imagens claras */
+  z-index: 2; /* Mantém acima do pôster */
 }
 
-/*Cores para classificação indicativa */
-.classification.green {
-  background-color: #00c853; /* Livre */
-  color: #000;
-}
-
-.classification.blue {
-  background-color: #2196f3; /* 10 */
-  color: #fff;
-}
-
-.classification.yellow {
-  background-color: #ffeb3b; /* 12 */
-  color: #000;
-}
-
-.classification.orange {
-  background-color: #ff9800; /* 14 */
-  color: #000;
-}
-
-.classification.red {
-  background-color: #f44336; /* 16 */
-  color: #fff;
-}
-
-.classification.black {
-  background-color: #000; /* 18 */
-  color: #fff;
-}
-
-.classification.gray {
-  background-color: #777; /* fallback */
-  color: #fff;
-}
+/* Cores das Classificações (Mantidas) */
+.classification.green { background-color: #00c853; color: #000; }
+.classification.blue { background-color: #2196f3; color: #fff; }
+.classification.yellow { background-color: #ffeb3b; color: #000; }
+.classification.orange { background-color: #ff9800; color: #000; }
+.classification.red { background-color: #f44336; color: #fff; }
+.classification.black { background-color: #000; color: #fff; }
+.classification.gray { background-color: #777; color: #fff; }

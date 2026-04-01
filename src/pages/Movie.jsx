@@ -61,6 +61,12 @@ function Movie() {
     }
   };
 
+  const formatRuntime = (minutes) => {
+    const hours = Math.floor(minutes / 60);
+    const mins = minutes % 60;
+    return `${hours}h ${mins}min`;
+  };
+
   if (!movie) return <p className="loading">Carregando...</p>;
 
   const backdropURL = `https://image.tmdb.org/t/p/original${movie.backdrop_path}`;
@@ -89,7 +95,7 @@ function Movie() {
               </span>
 
               <div className="movie-runtime">
-                <FaRegClock /> {movie.runtime} min
+                <FaRegClock /> {formatRuntime(movie.runtime)}
               </div>
               
               <span className="movie-year">{releaseYear}</span>

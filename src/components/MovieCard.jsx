@@ -10,7 +10,7 @@ const apiKey = import.meta.env.VITE_API_KEY;
 const MovieCard = ({ movie, showLink }) => {
     const [certification, setCertification] = useState("");
 
-    // 🔹 Função para pegar classificação
+    // Função para pegar classificação
     const getCertification = async () => {
         try {
             const res = await fetch(
@@ -59,17 +59,14 @@ const MovieCard = ({ movie, showLink }) => {
             <div className="movie-card">
                 <img src={imageURL + movie.poster_path} alt={movie.title} />
 
-                {/* Nova div que agrupa as informações centrais para o Flexbox funcionar */}
                 <div className="movie-card-info">
                     <h2>{movie.title}</h2>
 
-                    {/* Classe "rating" adicionada para estilização específica da nota */}
                     <div className="rating">
                         <FaStar /> {movie.vote_average.toFixed(1)}
                     </div>
                 </div>
 
-                {/* Mudança de span para div para garantir o comportamento de bloco inteiro na base */}
                 <div className={`classification ${getClassColor(certification)}`}>
                     {certification || "N/A"}
                 </div>

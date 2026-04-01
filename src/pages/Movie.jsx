@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-// Adicionamos o FaRegClock aqui:
 import { FaStar, FaRegClock } from "react-icons/fa"; 
 
 import "./Movie.css";
@@ -80,7 +79,6 @@ function Movie() {
           <div className="movie-info">
             <h1>{movie.title}</h1>
 
-            {/* 🔥 Esta é a área que foi reestruturada para alinhar tudo */}
             <div className="movie-meta">
               <div className="movie-rating">
                 <FaStar /> {movie.vote_average.toFixed(1)}
@@ -90,7 +88,6 @@ function Movie() {
                 {certification || "N/A"}
               </span>
 
-              {/* Duração agora tem o ícone de relógio e uma div própria */}
               <div className="movie-runtime">
                 <FaRegClock /> {movie.runtime} min
               </div>
